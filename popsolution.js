@@ -1,5 +1,5 @@
-//change 5 to the total number of questions
-var total=5
+//change 10 to the total number of questions
+var total=10
 var question=new Array()
 for (i=1;i<=total+1;i++){
 temp="choice"+i+"=new Array()"
@@ -94,3 +94,4 @@ solution[7]="a"
 solution[8]="d"
 solution[9]="b"
 solution[10]="c"
+
