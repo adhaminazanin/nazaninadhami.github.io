@@ -12,7 +12,7 @@ var compliments=new Array()
 compliments[0]="Excellent!"
 compliments[1]="Wow, you're really rocking!"
 compliments[2]="You must have studied hard. Good job!"
-compliments[3]="Right on."
+compliments[3]="That's Correct! Great job!."
 compliments[4]="Correct!"
 compliments[5]="Great Job!"
 compliments[6]="Good work!"
@@ -94,4 +94,5 @@ solution[7]="a"
 solution[8]="d"
 solution[9]="b"
 solution[10]="c"
+
 
