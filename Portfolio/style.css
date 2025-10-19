@@ -1,0 +1,241 @@
+
+/*
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+*/
+
+
+
+  <style>
+    /* ---------- Global Styles ---------- */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Nunito', sans-serif;
+      background: #f4f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #0ea5e9;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #0284c7;
+    }
+
+    #wrapper {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* ---------- Navigation Bar ---------- */
+    #menu-wrapper {
+      background: linear-gradient(90deg, #0ea5e9, #14b8a6);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    #menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    #menu ul li a {
+      display: block;
+      padding: 15px 24px;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    #menu ul li a:hover,
+    #menu ul li.current_page_item a {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+    }
+
+    /* ---------- Header ---------- */
+    #logo {
+      text-align: center;
+      padding: 50px 20px 25px;
+    }
+
+    #logo h1 {
+      font-size: 2.2em;
+      font-weight: 700;
+      color:  #191970;
+        text-shadow: 2px 2px 8px rgba(70, 130, 180, 0.4);
+    }
+
+    #logo p {
+      color: #475569;
+      font-size: 1em;
+    }
+
+
+    /* ---------- Page Section ---------- */
+    #page {
+      max-width: 900px;
+      margin: 0 auto 60px auto; /* added bottom space for balance */
+      background: #F0F8FF;
+      border-radius: 14px;
+      padding: 28px 40px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    }
+
+    #page p {
+      font-size: 1em;
+      color: #1e293b;
+        text-align: justify;       /* makes intro paragraph justified */
+  text-justify: inter-word;  /* improves spacing */
+  line-height: 1.7; 
+    }
+
+    /* ---------- Grid Boxes ---------- */
+    #three-column.container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px; /* consistent even spacing horizontally and vertically */
+      padding: 50px 40px;
+      max-width: 1200px;
+      margin: 0 auto 60px auto;
+      box-sizing: border-box;
+    }
+
+    .box-style {
+      background: #F0F8FF;
+      border-radius: 12px;
+      box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
+      padding: 24px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .box-style:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .content h2 {
+      color: #0ea5e9;
+  font-weight: 700;
+  text-align: center;     /* centers the box titles */
+  margin-bottom: 12px;
+    }
+
+    .content p {
+       color: #1e293b;
+  font-size: 0.95em;
+  text-align: justify;    /* justifies paragraph text */
+  text-justify: inter-word;
+    }
+
+    /* ---------- Buttons ---------- */
+    .button {
+      display: inline-block;
+      background: linear-gradient(90deg, #0ea5e9, #14b8a6);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-top: 12px;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .button:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    /* ---------- Footer ---------- */
+    #footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 32px 10px;
+      font-size: 0.85em;
+    }
+
+    #footer a {
+      color: #67e8f9;
+    }
+
+    #footer a:hover {
+      color: #a5f3fc;
+    }
+/* Animated text line */
+#animated-text {
+  font-size: 1.8em;          /* make it slightly smaller than the title */
+  color: #191970;            /* same deep blue for consistency */
+  font-weight: 700;          /* make it bold */
+  margin-top: 12px;
+  text-shadow: 1px 1px 4px rgba(25, 25, 112, 0.2); /* subtle shadow */
+}
+
+.fade-text {
+  color: #191970;
+  font-weight: 700;
+  display: inline-block;
+}
+
+/* Use pseudo-element for changing text */
+.fade-text::after {
+  content: "Technology Integration in Education";
+  animation: changeText 16s infinite;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Fade and switch words */
+@keyframes changeText {
+  0% { content: "Technology Integration in Education"; opacity: 1; }
+  20% { opacity: 0; }
+  25% { content: "Language Learning"; opacity: 1; }
+  45% { opacity: 0; }
+  50% { content: "STEM Education"; opacity: 1; }
+  70% { opacity: 0; }
+  75% { content: "Human-Computer Interaction"; opacity: 1; }
+  95% { opacity: 0; }
+  100% { content: "Technology Integration in Education"; opacity: 1; }
+}
+
+
+
+    /* ---------- Responsive Design ---------- */
+    @media (max-width: 768px) {
+      #three-column.container {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+      }
+
+      .box-style {
+        width: 100%;
+      }
+
+      #logo h1 {
+        font-size: 1.8em;
+      }
+        
+    }
+/* === Portfolio images styling === */
+.portfolio-image {
+  width: 90%;            /* Keeps image within the box */
+  max-width: 350px;      /* Prevents it from being too large */
+  height: auto;          /* Keeps correct proportions */
+  display: block;
+  margin: 15px auto;     /* Centers the image nicely */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+  </style>

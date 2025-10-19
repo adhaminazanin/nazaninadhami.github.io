@@ -1,0 +1,237 @@
+
+body{ font-family: "Inter", ui-sans-serif, system-ui, -apple-system,
+               "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+               "Apple Color Emoji","Segoe UI Emoji";
+  background: radial-gradient(1200px 800px at 20% 0%, #0b1327 0%, var(--bg) 50%);
+  color: var(--text);
+  margin:0;
+  padding:32px 0 48px;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically */
+	}
+h1{
+  text-align:center;
+  font-weight:800;
+  letter-spacing:.3px;
+  margin:0 0 8px;
+  color:#A52A2A;
+  font-size: clamp(28px, 3.2vw, 42px);
+}
+p{
+  text-align:center;
+  color: var(--muted);
+  margin:0 0 18px;
+  font-size: 15px;
+}
+.style1{ color:#f87171; font-weight:700; }
+	#footer{
+		height:30px;
+		vertical-align:middle;
+		text-align:right;
+		clear:both;
+		padding-right:3px;
+		background-color:#317082;
+		margin-top:2px;
+		width:790px;
+	}
+	#footer form{
+		margin:0px;
+		margin-top:2px;
+	}
+	#dhtmlgoodies_dragDropContainer{	/* Main container for this script */
+		width:1000px;
+		height:600px;
+		border:2px solid #317082;
+		background-color:#FFEBCD;
+		-moz-user-select:none;
+	}
+	#dhtmlgoodies_dragDropContainer ul{	/* General rules for all <ul> */
+		margin-top:0px;
+		margin-left:0px;
+		margin-bottom:0px;
+		padding:4px;
+	}
+	
+	#dhtmlgoodies_dragDropContainer li,#dragContent li,li#indicateDestination{	/* Movable items, i.e. <LI> */
+		list-style-type:none;
+		height:15px;
+		background-color:#E9967A;
+		border:2px solid #000000;
+		padding:4px;
+		margin-bottom:2px;
+		cursor:pointer;
+		font-size:14px;
+		line-height:10px;
+	}
+
+	li#indicateDestination{	/* Box indicating where content will be dropped - i.e. the one you use if you don't use arrow */
+		border:1px dotted #600;	
+		background-color:#FFF;
+	}
+		
+	#dhtmlgoodies_dragDropContainer ul li.correctAnswer{	/* Correctly moved item */
+		background-color:green;
+		color:#FFF;
+	}
+	#dhtmlgoodies_dragDropContainer ul li.wrongAnswer{	/* Item moved to wrong box */
+		background-color:red;
+		color:#FFF;
+	}
+	
+	
+	/* LEFT COLUMN CSS */
+	div#dhtmlgoodies_listOfItems{	/* Left column "Available students" */
+		
+		float:left;
+		padding-left:10px;
+		padding-right:10px;
+		
+		/* CSS HACK */
+		width: 180px;	/* IE 5.x */
+		width/* */:/**/160px;	/* Other browsers */
+		width: /**/160px;
+				
+	}
+	#dhtmlgoodies_listOfItems ul{	/* Left(Sources) column <ul> */
+		height:460px;	
+
+	}
+		
+	div#dhtmlgoodies_listOfItems div{
+		border:1px solid #000000;		
+	}
+	div#dhtmlgoodies_listOfItems div ul{	/* Left column <ul> */
+		margin-left:3px;	/* Space at the left of list - the arrow will be positioned there */
+	}
+	#dhtmlgoodies_listOfItems div p{	/* Heading above left column */
+		margin:2px;	
+		font-weight:bold;
+		padding-left:12px;
+		background-color:#FF1493;	
+		color:#FFF;
+		margin-bottom:5px;
+	}
+	/* END LEFT COLUMN CSS */
+	
+	#dhtmlgoodies_dragDropContainer .mouseover{	/* Mouse over effect DIV box in right column */
+		background-color:#E2EBED;
+		border:1px solid #317082;
+	}
+	
+	/* Start main container CSS */
+	
+	div#dhtmlgoodies_mainContainer{	/* Right column DIV */
+		width:810px;
+		float:left;	
+	}
+	#dhtmlgoodies_mainContainer div{	/* Parent <div> of small boxes */
+		float:left;
+		margin-right:10px;
+		margin-bottom:10px;
+		margin-top:2px;
+		border:2px solid #000000;
+
+		/* CSS HACK */
+		width: 172px;	/* IE 5.x */
+		width/* */:/**/170px;	/* Other browsers */
+		width: /**/170px;
+				
+	}
+	#dhtmlgoodies_mainContainer div ul{
+		margin-left:10px;
+	}
+	
+	#dhtmlgoodies_mainContainer div p{	/* Heading above small boxes */
+		margin:2px;
+		padding:1px;
+		padding-left:12px;
+		font-weight:bold;
+		background-color:#FF1493;	
+		color:#FFF;	
+		margin-bottom:5px;
+	}
+	
+	#dhtmlgoodies_mainContainer ul{	/* Small box in right column ,i.e <ul> */
+		width:152px;
+		height:200px;	
+		border:0px;	
+		margin-bottom:0px;
+		overflow:hidden;
+		
+	}
+	
+	#dragContent{	/* Drag container */
+		position:center;
+		width:150px;
+		height:15px;
+		display:none;
+		margin:0px;
+		padding:0px;
+		z-index:2000;
+	}
+
+	#dragDropIndicator{	/* DIV for the small arrow */
+		position:absolute;
+		width:7px;
+		height:10px;
+		display:none;
+		z-index:1000;
+		margin:0px;
+		padding:0px;
+	}
+	.style1 {color: #FF0000}
+div#dhtmlgoodies_mainContainer{
+  width:810px;                 /* keep your width */
+  float:left;
+  display:flex;                /* NEW: line up horizontally */
+  gap:10px;                    /* replaces margin-right on boxes */
+  align-items:stretch;         /* make all cards same height */
+}
+
+#dhtmlgoodies_mainContainer > div{
+  /* stop using floats for the cards */
+  float:none;                  
+  width:25%;                   /* four equal-width boxes */
+  display:flex;                /* NEW: make each card a column */
+  flex-direction:column;
+  height:260px;                /* <- choose the height you want */
+  box-sizing:border-box;
+  margin:0;                    /* gap handles spacing */
+}
+
+/* Make all headers the same height so titles don't change card height */
+#dhtmlgoodies_mainContainer > div p{
+  min-height:46px;             /* fits the 2-line LMS title */
+  display:flex;
+  align-items:center;
+  padding:4px 12px;
+  margin:2px 2px 5px 2px;      /* preserve your look */
+}
+
+/* Let the drop zone stretch to fill the card */
+#dhtmlgoodies_mainContainer > div ul{
+  flex:1;                      /* fill remaining space */
+  height:auto;                 /* override fixed height */
+  overflow:auto;               /* scroll if many items */
+  margin:0 10px 10px 10px;
+}
+/* 1) Undo any flex layout on <body> that might be pushing things around */
+body{
+  display:block;           /* <-- important: no page-wide flex */
+  margin:0;
+  padding:32px 0 48px;     /* keep your existing top/bottom spacing */
+}
+
+/* 2) Center the big container horizontally */
+#dhtmlgoodies_dragDropContainer{
+  margin: 0 auto;          /* centers it */
+  float: none;             /* make sure it isn't floating */
+}
+
+/* (optional) If you want a little space above/below the box */
+#dhtmlgoodies_dragDropContainer{
+  margin: 24px auto;       /* vertical + horizontal centering via auto left/right */
+}
+
+
+	
