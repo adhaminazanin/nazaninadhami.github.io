@@ -83,6 +83,36 @@ Released for free under the Creative Commons Attribution License
       color: #475569;
       font-size: 1em;
     }
+/* ---------- Header with Photo ---------- */
+.logo-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;               /* space between photo and text */
+  flex-wrap: wrap;         /* makes it responsive on small screens */
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;      /* makes photo circular */
+  object-fit: cover;       /* keeps image centered and cropped nicely */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo-text {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .logo-content {
+    flex-direction: column;   /* stack photo above text on mobile */
+  }
+  .logo-text {
+    text-align: center;
+  }
+}
+
 
 
     /* ---------- Page Section ---------- */
@@ -239,5 +269,6 @@ Released for free under the Creative Commons Attribution License
 }
 
   </style>
+
 
 
